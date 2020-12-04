@@ -1,0 +1,19 @@
+from tkinter import *
+root = Tk()
+
+def me():
+    print(f"Your Username is {uservalue.get()}")
+    new_window= Toplevel(root)
+    new_window.geometry("500x500")
+    new_window.title("i am new window")
+    a = Label(new_window, text="new wd").grid()
+    btn1 = Button(new_window,text= "close",command = lambda :new_window.destroy()).grid()
+
+btn = Button(root,text = "ope me", command = me).grid(row = 4, column = 8 )
+a1 = Label(root,text = "enter your username").grid()
+
+uservalue = StringVar()
+userentry = Entry(root,textvariable = uservalue).grid()
+root.geometry("500x500")
+root.title("helllozzz")
+root.mainloop()
